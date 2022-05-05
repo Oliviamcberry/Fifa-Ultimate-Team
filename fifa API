@@ -1,0 +1,104 @@
+import requests, json
+from pprint import pprint
+# Call an API
+url = 'https://futdb.app'
+response = requests.get(url)
+response.raise_for_status() # check for errors
+# Load JSON data into a Python variable.
+jsonData = json.loads(response.text)
+pprint(jsonData)
+
+{
+    "count": 20,
+    "count_total": 16603,
+    "page": 1,
+    "page_total": 831,
+    "items_per_page": 20,
+    "items": [
+        {
+            "id": 184,
+            "resource_id": 208722,
+            "name": "Sadio Mané",
+            "age": 28,
+            "resource_base_id": 208722,
+            "fut_bin_id": 518,
+            "fut_wiz_id": 317,
+            "first_name": "Sadio",
+            "last_name": "Mané",
+            "common_name": "Mané",
+            "height": 175,
+            "weight": 69,
+            "birth_date": "1992-10-04",
+            "league": 13,
+            "nation": 136,
+            "club": 9,
+            "rarity": 1,
+            "traits": [],
+            "specialities": [],
+            "tradeable": true,
+            "position": "LW",
+            "skill_moves": 4,
+            "weak_foot": 4,
+            "foot": "Right",
+            "attack_work_rate": "High",
+            "defense_work_rate": "Med",
+            "total_stats": null,
+            "total_stats_in_game": null,
+            "rating": 90,
+            "rating_average": 78,
+            "pace": 94,
+            "shooting": 85,
+            "passing": 80,
+            "dribbling": 90,
+            "defending": 44,
+            "physicality": 76,
+            "pace_attributes": {
+                "acceleration": 95,
+                "sprint_speed": 93
+            },
+            "shooting_attributes": {
+                "positioning": 92,
+                "finishing": 90,
+                "shot_power": 84,
+                "long_shots": 78,
+                "volleys": 75,
+                "penalties": 71
+            },
+            "passing_attributes": {
+                "vision": 85,
+                "crossing": 76,
+                "free_kick_accuracy": 64,
+                "short_passing": 85,
+                "long_passing": 71,
+                "curve": 76
+            },
+            "dribbling_attributes": {
+                "agility": 93,
+                "balance": 86,
+                "reactions": 93,
+                "ball_control": 89,
+                "dribbling": 91,
+                "composure": 84
+            },
+            "defending_attributes": {
+                "interceptions": 35,
+                "heading_accuracy": 84,
+                "standing_tackle": 42,
+                "sliding_tackle": 38
+            },
+            "physicality_attributes": {
+                "jumping": 86,
+                "stamina": 88,
+                "strength": 70,
+                "aggression": 75
+            },
+            "goalkeeper_attributes": {
+                "diving": 10,
+                "handling": 10,
+                "kicking": 15,
+                "positioning": 7,
+                "reflexes": 14
+            }
+        }
+    ]
+}
