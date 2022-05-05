@@ -1,0 +1,31 @@
+from tkinter importStringVar, 
+from PIL import ImageTk, image 
+
+
+root =Tk()
+root.title('fifa ultimate team builder!')
+root.iconbitmap()
+root.geometry("400x400")
+
+# drop down boxes 
+
+def show():
+    mylabel = Label(root, text=clicked.get()).pack()
+
+options = [
+
+
+
+
+]
+
+clicked = StringVar()
+clicked.set(options[0])
+
+drop = OptionMenu (root, clicked, *options)
+drop.pack()
+
+
+myButton = Button(root, text="shoow selection", command=show).pack
+
+root.mainloop()
